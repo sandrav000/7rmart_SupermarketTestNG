@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-07T11:36:53 IST" name="Suite" finished-at="2026-01-07T11:37:00 IST" duration-ms="7582">
+    <groups>
+    </groups>
+    <test started-at="2026-01-07T11:36:53 IST" name="Test" finished-at="2026-01-07T11:37:00 IST" duration-ms="7582">
+      <class name="testscript.ManageCategoryTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageCategoryTest@117159c0]" started-at="2026-01-07T11:36:53 IST" name="browserInitialization" finished-at="2026-01-07T11:36:55 IST" duration-ms="2320" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="manageCategoryMethod()[pri:1, instance:testscript.ManageCategoryTest@117159c0]" started-at="2026-01-07T11:36:55 IST" name="manageCategoryMethod" finished-at="2026-01-07T11:37:00 IST" duration-ms="5203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manageCategoryMethod -->
+      </class> <!-- testscript.ManageCategoryTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
