@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<listeners>
-<listener class-name="generateReport.Listeners"></listener>
-</listeners>
-  <test thread-count="5" name="Test">
-   <parameter name="browser" value="chrome"></parameter>
-   <classes>
-   
-     <!-- <class name="testscript.ManageCategoryTest/"> -->
-     <!-- <class name="testscript.LoginTest/"> 
+	<listeners>
+		<listener class-name="generateReport.Listeners"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
       
       <class name="testscript.ManageContactTest"/>
       <class name="testscript.ManageNewsTest"/>
       <class name="testscript.ManageFooterTextTest"/>
-      <class name="testscript.LogoutTest/">--> 
-      <class name="testscript.AdminUsersTest">
-	  
-        <methods>
-     <!-- <include name="verifyTheUserIsAbleToLoginUsingValidCredentials"></include>
-      <include name="verifyTheUserIsAbleToLoginUsingValidUsernameAndInvalidPassword"></include>-->
-      <!--  <exclude name="verifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword"></exclude>
-      <exclude name="verifyTheUserIsAbleToLoginUsingInValidCredentials"></exclude>-->
-      </methods>
-      </class>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+      <class name="testscript.LogoutTest"/>
+	  <class name="testscript.LoginTest"/>
+	  <class name="testscript.ManageCategoryTest"/>
+	  <class name="testscript.AdminUsersTest"/>
+			
+				<!--<methods>
+					 <include
+					name="verifyTheUserIsAbleToLoginUsingValidCredentials"></include>
+      <include
+					name="verifyTheUserIsAbleToLoginUsingValidUsernameAndInvalidPassword"></include>-->
+					<!--  <exclude
+					name="verifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword"></exclude>
+      <exclude name="verifyTheUserIsAbleToLoginUsingInValidCredentials"></exclude>
+				</methods>
+			</class>-->
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

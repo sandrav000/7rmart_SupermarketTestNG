@@ -11,6 +11,7 @@
         <methods>
           <include name="adminUsersMethod"/>
           <include name="browserInitialization"/>
+          <include name="browserQuit"/>
         </methods>
       </class> <!-- testscript.AdminUsersTest -->
     </classes>
