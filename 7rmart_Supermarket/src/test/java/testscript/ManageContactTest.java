@@ -33,7 +33,7 @@ public class ManageContactTest extends Base {
 //				ManageContactPage managecontactpage=new ManageContactPage(driver);
 		managecontactpage = logoutpage.clickManageContactMoreInfo();
 		managecontactpage.clickActionInManageContact().enterPhoneNumberInmanageContactMethod(phone)
-				.enterEmailInmanageContactMethod(email).enterAddressInmanageContactMethod(address)
+				.enterEmailInmanageContactMethod(email).enterAddressInmanageContactMethod(address).enterDeliveryTimeInmanageContactMethod(deivery_time).enterDeliveryChargeLimitInmanageContactMethod(deivery_charge)
 				.clickManageContactUpdateButton();
 //				managecontactpage.enterPhoneNumberInmanageContactMethod(phone);
 //				managecontactpage.enterEmailInmanageContactMethod(email);

@@ -67,6 +67,18 @@ public class ManageContactPage {
 		return this;
 
 	}
+	public ManageContactPage enterDeliveryTimeInmanageContactMethod(String deivery_time) {
+		deliverytimefield.clear();
+		deliverytimefield.sendKeys(deivery_time);
+		return this;
+
+	}
+	public ManageContactPage enterDeliveryChargeLimitInmanageContactMethod(String deivery_charge) {
+		deliverychargelimitfield.clear();
+		deliverychargelimitfield.sendKeys(deivery_charge);
+		return this;
+
+	}
 
 	public ManageContactPage clickManageContactUpdateButton() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;

@@ -8,24 +8,35 @@
         <methods>
           <include name="manageCategoryMethod"/>
           <include name="browserInitialization"/>
+          <include name="browserQuit"/>
         </methods>
       </class> <!-- testscript.ManageCategoryTest -->
+      <class name="testscript.LogoutTest">
+        <methods>
+          <include name="browserInitialization"/>
+          <include name="browserQuit"/>
+          <include name="logoutMethod"/>
+        </methods>
+      </class> <!-- testscript.LogoutTest -->
       <class name="testscript.ManageFooterTextTest">
         <methods>
           <include name="manageFooterTextMethod"/>
           <include name="browserInitialization"/>
+          <include name="browserQuit"/>
         </methods>
       </class> <!-- testscript.ManageFooterTextTest -->
       <class name="testscript.ManageContactTest">
         <methods>
           <include name="browserInitialization"/>
           <include name="manageContactMethod"/>
+          <include name="browserQuit"/>
         </methods>
       </class> <!-- testscript.ManageContactTest -->
       <class name="testscript.AdminUsersTest">
         <methods>
           <include name="adminUsersMethod"/>
           <include name="browserInitialization"/>
+          <include name="browserQuit"/>
         </methods>
       </class> <!-- testscript.AdminUsersTest -->
     </classes>

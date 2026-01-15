@@ -14,9 +14,9 @@ public class ManageFooterTextPage {
 	@FindBy(xpath = "//textarea[@id='content']")
 	WebElement addressfield;
 	@FindBy(xpath = "//input[@id='email']")
-	WebElement email;
+	WebElement emailfield;
 	@FindBy(xpath = "//input[@id='phone']")
-	WebElement phone;
+	WebElement phonefield;
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement update;
 	@FindBy(xpath = "//div[contains(@class,'alert alert-success')]")
@@ -41,6 +41,18 @@ public class ManageFooterTextPage {
 	public ManageFooterTextPage enterAddressInmanageFooterMethod(String address) {
 		addressfield.clear();
 		addressfield.sendKeys(address);
+		return this;
+
+	}
+	public ManageFooterTextPage enterEmailInmanageFooterMethod(String email) {
+		emailfield.clear();
+		emailfield.sendKeys(email);
+		return this;
+
+	}
+	public ManageFooterTextPage enterPhoneInmanageFooterMethod(String phone) {
+		phonefield.clear();
+		phonefield.sendKeys(phone);
 		return this;
 
 	}
