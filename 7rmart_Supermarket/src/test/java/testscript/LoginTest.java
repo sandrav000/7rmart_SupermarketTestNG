@@ -1,10 +1,8 @@
 package testscript;
 
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import constant.Constant;
 import pages.LoginPage;
 import pages.LogoutPage;
@@ -13,7 +11,7 @@ import utilities.ExcelUtility;
 public class LoginTest extends Base {
 	LogoutPage logoutpage;
 
-	@Test(priority = 1,description="Verify the user is able to Login with valid credentials")
+	@Test(priority = 1, description = "Verify the user is able to Login with valid credentials")
 	public void verifyTheUserIsAbleToLoginUsingValidCredentials() throws IOException {
 //		String user="admin";
 //		String pass="admin";
@@ -26,11 +24,11 @@ public class LoginTest extends Base {
 		logoutpage = loginpage.clickSignin();
 
 		boolean homepage = loginpage.isHomePageDisplayed();
-		Assert.assertTrue(homepage,Constant.LOGIN_VALIDCREDENTIALS);
+		Assert.assertTrue(homepage, Constant.LOGIN_VALIDCREDENTIALS);
 
 	}
 
-	@Test(priority = 2,description="Verify the user is able to login with valid username and invalid password")
+	@Test(priority = 2, description = "Verify the user is able to login with valid username and invalid password")
 	public void verifyTheUserIsAbleToLoginUsingValidUsernameAndInvalidPassword() throws IOException {
 //		String user="admin";
 //		String pass="admin@123";
@@ -44,10 +42,10 @@ public class LoginTest extends Base {
 		logoutpage = loginpage.clickSignin();
 
 		boolean alert = loginpage.isAlertDisplayed();
-		Assert.assertTrue(alert,Constant.LOGIN_VALID_USERNAME_INVALID_PASSWORD);
+		Assert.assertTrue(alert, Constant.LOGIN_VALID_USERNAME_INVALID_PASSWORD);
 	}
 
-	@Test(priority = 3,description="Verify the user is able to login with invalid username and valid password")
+	@Test(priority = 3, description = "Verify the user is able to login with invalid username and valid password")
 	public void verifyTheUserIsAbleToLoginUsingInvalidUsernameAndValidPassword() throws IOException {
 //		String user="admin#1234";
 //		String pass="admin";
@@ -60,10 +58,10 @@ public class LoginTest extends Base {
 		logoutpage = loginpage.clickSignin();
 
 		boolean alert = loginpage.isAlertDisplayed();
-		Assert.assertTrue(alert,Constant.LOGIN_INVALID_USERNAME_VALID_PASSWORD);
+		Assert.assertTrue(alert, Constant.LOGIN_INVALID_USERNAME_VALID_PASSWORD);
 	}
 
-	@Test(priority = 4,description="Verify the user is able to login using invalid username and invalid password")
+	@Test(priority = 4, description = "Verify the user is able to login using invalid username and invalid password")
 	public void verifyTheUserIsAbleToLoginUsingInValidCredentials() throws IOException {
 //		String user="ad@123";
 //		String pass="ad#123";
@@ -76,7 +74,7 @@ public class LoginTest extends Base {
 		logoutpage = loginpage.clickSignin();
 
 		boolean alert = loginpage.isAlertDisplayed();
-		Assert.assertTrue(alert,Constant.LOGIN_INVALID_CREDENTIALS);
+		Assert.assertTrue(alert, Constant.LOGIN_INVALID_CREDENTIALS);
 
 	}
 

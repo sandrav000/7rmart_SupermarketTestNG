@@ -1,12 +1,9 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-
 import utilities.PageUtility;
 import utilities.WaitUtility;
 
@@ -28,7 +25,6 @@ public class AdminUsersPage {
 	WebElement savebutton;
 	@FindBy(xpath = "//div[contains(@class,'alert-success')]")
 	WebElement alertsuccess;
-
 
 	public AdminUsersPage(WebDriver driver) {
 		this.driver = driver;

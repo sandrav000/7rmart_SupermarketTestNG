@@ -44,12 +44,14 @@ public class ManageFooterTextPage {
 		return this;
 
 	}
+
 	public ManageFooterTextPage enterEmailInmanageFooterMethod(String email) {
 		emailfield.clear();
 		emailfield.sendKeys(email);
 		return this;
 
 	}
+
 	public ManageFooterTextPage enterPhoneInmanageFooterMethod(String phone) {
 		phonefield.clear();
 		phonefield.sendKeys(phone);

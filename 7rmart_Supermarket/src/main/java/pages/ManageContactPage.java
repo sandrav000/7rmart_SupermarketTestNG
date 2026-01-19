@@ -1,17 +1,15 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import utilities.PageUtility;
 import utilities.WaitUtility;
 
 public class ManageContactPage {
 	public WebDriver driver;
-	PageUtility pageutility=new PageUtility();
+	PageUtility pageutility = new PageUtility();
 	WaitUtility waitutility = new WaitUtility();
 //	        @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact' and @class='small-box-footer']")WebElement managecontactmoreinfo;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/contact/edit_contact?edit=1']")
@@ -69,12 +67,14 @@ public class ManageContactPage {
 		return this;
 
 	}
+
 	public ManageContactPage enterDeliveryTimeInmanageContactMethod(String deivery_time) {
 		deliverytimefield.clear();
 		deliverytimefield.sendKeys(deivery_time);
 		return this;
 
 	}
+
 	public ManageContactPage enterDeliveryChargeLimitInmanageContactMethod(String deivery_charge) {
 		deliverychargelimitfield.clear();
 		deliverychargelimitfield.sendKeys(deivery_charge);

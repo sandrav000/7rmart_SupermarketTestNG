@@ -3,7 +3,6 @@ package testscript;
 import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import constant.Constant;
 import pages.LoginPage;
 import pages.LogoutPage;
@@ -14,7 +13,8 @@ public class ManageNewsTest extends Base {
 	LogoutPage logoutpage;
 	ManageNewsPage managenewspage;
 
-	@Test(priority = 1, groups = { "regression" },description = "Verify admin user is able to add a new news item successfully")
+	@Test(priority = 1, groups = {
+			"regression" }, description = "Verify admin user is able to add a new news item successfully")
 	public void manageNewsMoreInfoMethod() throws IOException {
 		String user = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String pass = ExcelUtility.readStringData(1, 1, "LoginPage");
@@ -34,7 +34,7 @@ public class ManageNewsTest extends Base {
 //			managenewspage.clickSaveButtonInmanageNewsMoreInfo();
 
 		boolean alert = managenewspage.isAlertDisplayed();
-		Assert.assertTrue(alert,Constant.MANAGENEWS_ERROR_MESSAGE);
+		Assert.assertTrue(alert, Constant.MANAGENEWS_ERROR_MESSAGE);
 
 	}
 

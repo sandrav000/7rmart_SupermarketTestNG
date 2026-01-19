@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -29,12 +28,11 @@ public class Base {
 	@Parameters("browser")
 	public void browserInitialization(String browser) throws Exception {
 		try {
-			properties=new Properties();
-			fileinputstream=new FileInputStream(Constant.CONFIGFILE);
+			properties = new Properties();
+			fileinputstream = new FileInputStream(Constant.CONFIGFILE);
 			properties.load(fileinputstream);
-			
-		}
-		catch(Exception e){
+
+		} catch (Exception e) {
 			System.out.println(e);
 		}
 		if (browser.equalsIgnoreCase("chrome")) {

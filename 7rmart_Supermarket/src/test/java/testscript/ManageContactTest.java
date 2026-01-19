@@ -3,7 +3,6 @@ package testscript;
 import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import constant.Constant;
 import pages.LoginPage;
 import pages.LogoutPage;
@@ -14,7 +13,8 @@ public class ManageContactTest extends Base {
 	LogoutPage logoutpage;
 	ManageContactPage managecontactpage;
 
-	@Test(priority = 1, groups = { "regression" },description = "Verify admin user is able to update manage contact details successfully")
+	@Test(priority = 1, groups = {
+			"regression" }, description = "Verify admin user is able to update manage contact details successfully")
 	public void manageContactMethod() throws IOException {
 		String user = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String pass = ExcelUtility.readStringData(1, 1, "LoginPage");
@@ -33,15 +33,16 @@ public class ManageContactTest extends Base {
 //				ManageContactPage managecontactpage=new ManageContactPage(driver);
 		managecontactpage = logoutpage.clickManageContactMoreInfo();
 		managecontactpage.clickActionInManageContact().enterPhoneNumberInmanageContactMethod(phone)
-				.enterEmailInmanageContactMethod(email).enterAddressInmanageContactMethod(address).enterDeliveryTimeInmanageContactMethod(deivery_time).enterDeliveryChargeLimitInmanageContactMethod(deivery_charge)
-				.clickManageContactUpdateButton();
+				.enterEmailInmanageContactMethod(email).enterAddressInmanageContactMethod(address)
+				.enterDeliveryTimeInmanageContactMethod(deivery_time)
+				.enterDeliveryChargeLimitInmanageContactMethod(deivery_charge).clickManageContactUpdateButton();
 //				managecontactpage.enterPhoneNumberInmanageContactMethod(phone);
 //				managecontactpage.enterEmailInmanageContactMethod(email);
 //				managecontactpage.enterAddressInmanageContactMethod(address);
 //				managecontactpage.clickManageContactUpdateButton();
 
 		boolean alert = managecontactpage.isAlertDisplayed();
-		Assert.assertTrue(alert,Constant.MANAGECONTACT_ERROR_MESSAGE);
+		Assert.assertTrue(alert, Constant.MANAGECONTACT_ERROR_MESSAGE);
 
 	}
 

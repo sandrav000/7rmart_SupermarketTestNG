@@ -3,7 +3,6 @@ package testscript;
 import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import constant.Constant;
 import pages.LoginPage;
 import pages.LogoutPage;
@@ -14,7 +13,7 @@ public class ManageCategoryTest extends Base {
 	LogoutPage logoutpage;
 	ManageCategoryPage managecategorypage;
 
-	@Test(priority = 1,description = "Verify admin user is able to add a new category or view already existing category message")
+	@Test(priority = 1, description = "Verify admin user is able to add a new category or view already existing category message")
 	public void manageCategoryMethod() throws IOException {
 		String user = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String pass = ExcelUtility.readStringData(1, 1, "LoginPage");
@@ -36,8 +35,8 @@ public class ManageCategoryTest extends Base {
 //          managecategoryspage.selectFileUsingChooseFile();
 //			managecategoryspage.clickSaveButtonInmanageCategory();
 
-			boolean alert=managecategorypage.isAlertDisplayed();
-			Assert.assertTrue(alert,Constant.MANAGECATEGORY_ERROR_MESSAGE);
-		
+		boolean alert = managecategorypage.isAlertDisplayed();
+		Assert.assertTrue(alert, Constant.MANAGECATEGORY_ERROR_MESSAGE);
+
 	}
 }
