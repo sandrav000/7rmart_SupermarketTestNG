@@ -10,15 +10,16 @@ import pages.LogoutPage;
 import utilities.ExcelUtility;
 
 public class LogoutTest extends Base {
+	LogoutPage logoutpage;
 	@Test(priority = 1,description="Verify admin user is able to logout successfully")
 	public void logoutMethod() throws IOException {
 		String user = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String pass = ExcelUtility.readStringData(1, 1, "LoginPage");
 
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterTheUsername(user);
-		loginpage.enterThePassword(pass);
-		loginpage.clickSignin();
+		loginpage.enterTheUsername(user).enterThePassword(pass);
+//		loginpage.enterThePassword(pass);
+		logoutpage=loginpage.clickSignin();
 
 		LogoutPage logoutpage = new LogoutPage(driver);
 		logoutpage.adminClick();
